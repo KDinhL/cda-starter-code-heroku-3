@@ -7,6 +7,8 @@ app.use(express.json());
 
 const warehouseRoutes = require('./routes/warehouseRoute');
 const inventoryRoutes = require('./routes/inventoryRoute');
+const cors = require('cors');
+app.use(cors());
 
 app.get('/', (_req, res) => {
   res.send("Welcome to my API");
